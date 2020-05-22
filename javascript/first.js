@@ -62,6 +62,16 @@ const showImage = (event) => {
     var date = new Date();
     const ID = event.target.parentNode.id || event.target.parentNode.parentNode.id;
     
+    document.getElementById("image").style.display = "none";
+    document.querySelector("hr").style.margin = "2vh 3.5vw";
+    document.querySelector("hr").style.display = "none";
+    document.getElementById("isOpen").textContent = "";   
+    document.getElementById("opening").textContent = "";
+    document.getElementById("closing").textContent = "";
+    document.getElementById("element").textContent = "";
+
+
+
     if (ID.length === 11){
         closing = "4.30 PM";
         opening = "9.30 AM";
@@ -151,6 +161,12 @@ const showImage = (event) => {
         document.getElementById("closing").textContent = "Closing Time : " + closing;
         document.querySelector("hr").style.width = "10vw";
         document.querySelector("hr").style.background = "#fff";
+    }
+    else if(event.target.id === "container" || event.target.id === "upperHalf" || event.target.id === "lowerHalf"){
+        document.getElementById("element").textContent = "Original Map";
+        document.getElementById("element").style.margin = "0";
+        document.querySelector("hr").style.margin = "0";
+        document.getElementById("image").style.display = "flex";
     }
     
 };

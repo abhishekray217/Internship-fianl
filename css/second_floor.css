@@ -709,6 +709,13 @@ a span:nth-child(4)
 
 }
 
+#image{
+    width:17vw;
+    height:29vh;
+    border-radius: 1vw;
+    display: none;
+    justify-content: center;
+}
 
 .currentTime {
     padding-left: 2vw;
