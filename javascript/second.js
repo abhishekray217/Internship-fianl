@@ -3,18 +3,18 @@ function displayDate() {
 
     now = new Date();
     //var christmas = new Date(2016, 11, 25);
-    date = now.getDate()
+    date = now.getDate();
 
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     month = now.getMonth();
 
     year = now.getFullYear();
-    en = "AM"
+    en = "AM";
     hour = now.getHours();
 
     if (hour > 12) {
         hour = hour - 12;
-        en = "PM"
+        en = "PM";
     }
     if (hour == 0) {
         hour = 12;
@@ -31,7 +31,7 @@ function displayDate() {
         seconds = "0" + seconds;
     }
     // time = hour + ":" + minutes + ":" + seconds + " " + en + " " +
-    fullDate = date + " " + months[month] + " " + year
+    fullDate = date + " " + months[month] + " " + year;
     // console.log(fullDate);
     document.getElementById("showDate").textContent = fullDate;
 }
@@ -118,7 +118,7 @@ const showImage = (event) => {
         closing = "6.00 AM";
         opening = "6.00 PM";
         document.getElementById("isOpen").textContent = "Currently :  Closed";
-        if (date.getHours() > 6 && date.getHours() < 18) {
+        if (date.getHours() >= 6 && date.getHours() < 18) {
             document.getElementById("isOpen").textContent = "Currently :  Open";
         }
         document.getElementById("element").textContent = "CTTC Room";
@@ -130,7 +130,7 @@ const showImage = (event) => {
         closing = "6.00 AM";
         opening = "9.00 PM";
         document.getElementById("isOpen").textContent = "Currently :  Closed";
-        if (date.getHours() > 6 && date.getHours() < 21) {
+        if (date.getHours() >= 6 && date.getHours() < 21) {
             document.getElementById("isOpen").textContent = "Currently :  Open";
         }
         document.getElementById("element").textContent = "Spectrum Room";
@@ -142,7 +142,7 @@ const showImage = (event) => {
         closing = "4.00 PM";
         opening = "10.30 AM";
         document.getElementById("isOpen").textContent = "Currently :  Closed";
-        if (date.getHours() > 9 && date.getHours() < 17) {
+        if (date.getHours() >= 10 && date.getHours() < 17) {
             document.getElementById("isOpen").textContent = "Currently :  Open";
         }
         document.getElementById("element").textContent = "Staff Room";
@@ -154,7 +154,7 @@ const showImage = (event) => {
         closing = "02.00 PM";
         opening = "12.00AM";
         document.getElementById("isOpen").textContent = "Currently :  Closed";
-        if (date.getHours() > 12 && date.getHours() < 2) {
+        if (date.getHours() >= 12 && date.getHours() < 14) {
             document.getElementById("isOpen").textContent = "Currently :  Open";
         }
         document.getElementById("element").textContent = "Examination Section";
@@ -166,7 +166,7 @@ const showImage = (event) => {
         closing = "02.00 PM";
         opening = "12.00AM";
         document.getElementById("isOpen").textContent = "Currently :  Closed";
-        if (date.getHours() > 12 && date.getHours() < 2) {
+        if (date.getHours() > 12 && date.getHours() < 14) {
             document.getElementById("isOpen").textContent = "Currently :  Open";
         }
         document.getElementById("element").textContent = "Academic Section";

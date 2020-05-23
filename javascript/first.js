@@ -3,18 +3,18 @@ function displayDate() {
 
     now = new Date();
     //var christmas = new Date(2016, 11, 25);
-    date = now.getDate()
+    date = now.getDate();
 
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     month = now.getMonth();
 
     year = now.getFullYear();
-    en = "AM"
+    en = "AM";
     hour = now.getHours();
 
     if (hour > 12) {
         hour = hour - 12;
-        en = "PM"
+        en = "PM";
     }
     if (hour == 0) {
         hour = 12;
@@ -141,7 +141,7 @@ const showImage = (event) => {
         closing = "02.00 PM";
         opening = "12.00AM";
         document.getElementById("isOpen").textContent = "Currently :  Closed";
-        if (date.getHours() > 12 && date.getHours() < 2) {
+        if (date.getHours() >= 12 && date.getHours() < 2) {
             document.getElementById("isOpen").textContent = "Currently :  Open";
         }
         document.getElementById("element").textContent = "Examination Section";
@@ -153,7 +153,7 @@ const showImage = (event) => {
         closing = "02.00 PM";
         opening = "12.00AM";
         document.getElementById("isOpen").textContent = "Currently :  Closed";
-        if (date.getHours() > 12 && date.getHours() < 2) {
+        if (date.getHours() >= 12 && date.getHours() < 2) {
             document.getElementById("isOpen").textContent = "Currently :  Open";
         }
         document.getElementById("element").textContent = "Academic Section";

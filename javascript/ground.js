@@ -3,18 +3,18 @@ function displayDate() {
 
     now = new Date();
     //var christmas = new Date(2016, 11, 25);
-    date = now.getDate()
+    date = now.getDate();
 
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     month = now.getMonth();
 
     year = now.getFullYear();
-    en = "AM"
+    en = "AM";
     hour = now.getHours();
 
     if (hour > 12) {
         hour = hour - 12;
-        en = "PM"
+        en = "PM";
     }
     if (hour == 0) {
         hour = 12;
