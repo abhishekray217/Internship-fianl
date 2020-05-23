@@ -31,7 +31,7 @@ function displayDate() {
         seconds = "0" + seconds;
     }
     // time = hour + ":" + minutes + ":" + seconds + " " + en + " " +
-    fullDate =date + " " + months[month] + " " + year
+    fullDate =date + " " + months[month] + " " + year;
     // console.log(fullDate);
     document.getElementById("showDate").textContent = fullDate;
 }

@@ -5,102 +5,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/ground_floor.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
     <title>Ground Floor</title>
 
 </head>
 
-<body style="background-image: url('images/Ground_Floor.jpg');">
-    <div class="contain">
-        <div class="upperHalf">
-            <div class="classroom-1">
-                <h3>Classsroom</h3>
+<body>
+    <div class="contain" id = "container">
+        <div class="upperHalf" id = "upperHalf">
+            <div class="classroom-1" id = "classroom-1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Classsroom</h3></span>
             </div>
             <div class="path"></div>
-            <div class="classroom-2">
-                <h3>Classsroom</h3>
+            <div class="classroom-2" id = "classroom-2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Classsroom</h3></span>
             </div>
             <!-- display board -->
             <div class="display">
-                content
+                <div class="image-1">
+                    <div class="clock">
+                        <div class="hour">
+                            <div class="hr" id="hr"></div>
+                        </div>
+                        <div class="min">
+                            <div class="mn" id="mn"></div>
+                        </div>
+                        <div class="sec">
+                            <div class="sc" id="sc"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataToDisplay">
+                    <h5 id = "element"></h5>
+                    <hr>
+                    <img src="images/Ground_Floor.jpg" id="image" >
+                    <p id="opening"></p>
+                    <p id="closing"></p>
+                    <p id="isOpen"></p>
+                </div>
             </div>
-            <div class="classroom-3">
-                <h3>Classsroom</h3>
+            <div class="classroom-3" id = "classroom-3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Classsroom</h3></span>
             </div>
             <div class="path"></div>
-            <div class="classroom-4">
-                <h3>Classsroom</h3>
+            <div class="classroom-4" id = "classroom-4">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Classsroom</h3></span>
             </div>
-            <div class="classroom-5">
-                <h3>Classsroom</h3>
+            <div class="classroom-5" id = "classroom-5">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Classsroom</h3></span>
             </div>
-            <div class="classroom-6">
-                <h3>Washroom</h3>
+            <div class="classroom-6" id = "washroom">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Washroom</h3></span>
             </div>
         </div>
-        <div class="lowerHalf">
+        <div class="lowerHalf" id = "lowerHalf">
             <div class="stairs-1">
-                <p>Stairs</p>
-                <a href="first_floor.html">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Floor1</a>
-                <a href="second_floor.html">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Floor2</a>
-
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">
+                    <h3>Stairs</h3>
+                </button>
+            
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Stairs to other floors</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Go one level Up</h5>
+                                <p style="color:black;">Go to First floor <a href="first_floor.html" role="button"
+                                        class="btn btn-secondary popover-test" title= "First Floor"
+                                        data-content="Popover body content is set in this attribute.">First</a></p>
+                                <hr>
+                                <h5>Go two level Up</h5>
+                                <p style="color:black;">Go to Second floor <a href="second_floor.html" role="button"
+                                        class="btn btn-secondary popover-test" title="Second Floor"
+                                        data-content="Popover body content is set in this attribute.">Second</a></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
             <div class="path-2"></div>
-            <div class="openspace">
-                <h3>Openspace</h3>
+            <div class="openspace" id = "openspace">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Openspace</h3></span>
             </div>
             <!-- date and time -->
             <div class="currentTime">
                 <h4 id="showDate">%date%</h4>
                 <img src="images/date.png" class="date">
             </div>
-            <div class="cttc">
-                <h3>Principal's Room</h3>
+            <div class="cttc" id = "principal">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Principal's Room</h3></span>
             </div>
             <div class="path-gnd"></div>
-            <div class="spectrum">
-                <h3>Hod Room</h3>
+            <div class="spectrum" id = "hod">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>HOD Room</h3></span>
             </div>
-            <div class="staff">
-                <h3>Openspace</h3>
+            <div class="staff" id = "staff">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Openspace</h3></span>
             </div>
             <div class="path-2"></div>
             <div class="stairs-2">
-                <p>Stairs</p>
-                <a href="first_floor.html">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>Floor1</a>
-                <a href="second_floor.html">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>Floor2</a>
-
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">
+                    <h3>Stairs</h3>
+                </button>
+            
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Stairs to other floors</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Go one level Up</h5>
+                                <p style="color:black;">Go to First floor <a href="first_floor.html" role="button"
+                                        class="btn btn-secondary popover-test" title= "First Floor"
+                                        data-content="Popover body content is set in this attribute.">First</a></p>
+                                <hr>
+                                <h5>Go two level Up</h5>
+                                <p style="color:black;">Go to Second floor <a href="second_floor.html" role="button"
+                                        class="btn btn-secondary popover-test" title="Second Floor"
+                                        data-content="Popover body content is set in this attribute.">Second</a></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
-            <div class="meeting">
-                <h3>Reading Room</h3>
+            <div class="meeting" id = "reading">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Reading Room</h3></span>
             </div>
-            <div class="lab">
-                <h3>Library</h3>
+            <div class="lab" id = "library">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><h3>Library</h3></span>
             </div>
             <div class="path-hr-1"></div>
             <div class="path-hr-2"></div>
         </div>
     </div>
     <script src="javascript/ground.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

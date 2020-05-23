@@ -542,10 +542,11 @@ a span:nth-child(4)
     grid-template-columns: 17vw 17.5vw;
     grid-template-rows: 36vh;
     bottom:8vh;
-    grid-row: 1/4;
-    grid-column: 5/7;
     margin:1.5vh;
     background: linear-gradient(0deg, #000, #262626);
+    grid-row: 1/4;
+    grid-column: 5/7;
+    
 }
 .display:before,
 .display:after {
